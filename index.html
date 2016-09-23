@@ -4,19 +4,21 @@
     <meta charset="utf-8">
     <title>friends list</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
   </head>
   <body ng-controller="mainCrtl">
-        {{myName}}
-        <br/>
-        <input type="texts" placeholder="add new friend" ng-model="name"></input>
-        <button ng-click="addFriends(name)">add</button>
-    <div ng-repeat="friend in myFriends">
+      {{myName}}
+      <br/>
+      <input type="text" placeholder="add new friend" ng-model="name">
+      <button ng-click="addFriend(name)">add</button>
+      <br/>
+      <div ng-repeat="friends in myFriends">
       <ul>
-        <li>List: {{myFriends}}</li>
-      </ul>
-    </div>
-
+      <li>List: {{friends}}</li>
+    </ul>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="app.js"></script>
+<script src="ctrl.js"></script>
   </body>
 </html>
